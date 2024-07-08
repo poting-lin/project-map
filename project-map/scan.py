@@ -18,9 +18,9 @@ def scan_directory(directory, exclude_folders=None, indent=0):
 def main():
     parser = argparse.ArgumentParser(
         description="Scan a project directory and output its hierarchy.")
-    parser.add_argument('--path', type=str, required=True,
+    parser.add_argument('--path', '-p', type=str, required=True,
                         help="The path to the project directory.")
-    parser.add_argument('--exclude', nargs='*', default=[],
+    parser.add_argument('--exclude', '-e', nargs='*', default=[],
                         help="List of folder names to exclude.")
 
     args = parser.parse_args()
